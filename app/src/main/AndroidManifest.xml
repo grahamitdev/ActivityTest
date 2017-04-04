@@ -78,6 +78,7 @@
         <activity android:name=".PercentFrameLayout" />
         <activity android:name=".BroadCastActivity" />
 
+
         <receiver
             android:name=".BootCompleteReceiver"
             android:enabled="true"

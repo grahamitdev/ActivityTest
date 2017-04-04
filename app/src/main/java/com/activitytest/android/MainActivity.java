@@ -21,22 +21,21 @@ import android.widget.Toast;
 
 public class MainActivity extends BaseActivity {
 
-    private  MyDatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dbHelper=new MyDatabaseHelper(this,"BookStore.db",null,2);
+
         //[获取NavigationBar高度]
         Resources resources = this.getResources();
-        int resourceId = resources.getIdentifier("navigation_bar_height","dimen", "android");
+        int resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android");
         int NavigationHeight = resources.getDimensionPixelSize(resourceId);
-        TextView editText=(TextView) findViewById(R.id.navigationbarheight);
-        editText.setText("NavigationHeight="+String.valueOf(NavigationHeight));
+        TextView editText = (TextView) findViewById(R.id.navigationbarheight);
+        editText.setText("NavigationHeight=" + String.valueOf(NavigationHeight));
         //[获取NavigationBar高度]
-        Log.d("height", "NavigationHeight="+String.valueOf(NavigationHeight));
+        Log.d("height", "NavigationHeight=" + String.valueOf(NavigationHeight));
 
 
         Button button1 = (Button) findViewById(R.id.button_1);
@@ -172,7 +171,7 @@ public class MainActivity extends BaseActivity {
         button15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-                ProgressDialog progressDialog=new ProgressDialog(MainActivity.this);
+                ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
                 progressDialog.setTitle("This is ProgressDialog");
                 progressDialog.setMessage("Loading...");
                 progressDialog.setCancelable(true);
@@ -201,9 +200,8 @@ public class MainActivity extends BaseActivity {
         button18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-               Intent intent =new Intent (MainActivity.this,SQLiteActivity.class);
+                Intent intent = new Intent(MainActivity.this, SQLiteActivity.class);
                 startActivity(intent);
-		Toast.makeText(MainActivity.this,"进入SQLiteActivity",Toast.LENGTH_SHORT).show();
             }
         });
 
