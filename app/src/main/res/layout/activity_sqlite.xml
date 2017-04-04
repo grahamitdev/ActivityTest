@@ -28,6 +28,16 @@
         android:layout_height="wrap_content"
         android:text="Updata_data"
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/delete_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete_data"
+        android:textAllCaps="false" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/line"/>
 
 
 </LinearLayout>
