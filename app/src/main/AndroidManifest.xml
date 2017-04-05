@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name="org.litepal.LitePalApplication"
@@ -79,7 +80,6 @@
         <activity android:name=".PercentFrameLayout" />
         <activity android:name=".BroadCastActivity" />
 
-
         <receiver
             android:name=".BootCompleteReceiver"
             android:enabled="true"
@@ -89,7 +89,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".SQLiteActivity"></activity>
+        <activity android:name=".SQLiteActivity" />
+        <activity android:name=".JsonActivity"></activity>
     </application>
 
 </manifest>

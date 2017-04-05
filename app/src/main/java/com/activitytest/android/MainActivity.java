@@ -204,6 +204,14 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+        Button button19 = (Button) findViewById(R.id.button_19);
+        button19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+                Intent intent = new Intent(MainActivity.this, JsonActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
